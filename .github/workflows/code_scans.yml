@@ -16,13 +16,12 @@ jobs:
           python-version: '3.9'
  
       - name: Install dependencies
-        run: |
-          pip install requests
+        run: pip install requests
  
       - name: Run script to fetch code scanning results
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: | python ./github.com/Gee-tha-S/codescanning/codescanning.py
+        run: python ./github.com/Gee-tha-S/codescanning/codescanning.py
  
       - name: Upload Results to Artifact
         uses: actions/upload-artifact@v2
