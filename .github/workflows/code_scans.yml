@@ -1,0 +1,32 @@
+name: Fetch Code Scanning Results
+ 
+on:
+  workflow_dispatch:  # Allows you to run this workflow manually from the Actions tab
+ 
+jobs:
+  fetch-results:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+ 
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.9'
+ 
+      - name: Install dependencies
+        run: |
+          pip install requests
+ 
+      - name: Run script to fetch code scanning results
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+python ./.github/scripts/fetch_code_scanning_results.py
+ 
+      - name: Upload Results to Artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: code-scanning-results
+          path: code_scanning_results.json
