@@ -3,8 +3,8 @@ import json
 import os
 
 # Fetch GitHub Personal Access Token from environment variable
-#TOKEN = "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"
-TOKEN = os.getenv("TOKEN_GITHUB")
+TOKEN = "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"
+#TOKEN = os.getenv("TOKEN_GITHUB")
 print(TOKEN),
 ORG_NAME = "FedEx"
 params = {'per_page': 100}
