@@ -4,7 +4,7 @@ import os
 
 # Fetch GitHub Personal Access Token from environment variable
 #TOKEN = "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"
-TOKEN = os.getenv("TOKEN")
+TOKEN = os.getenv("TOKEN-github")
 print(TOKEN),
 ORG_NAME = "FedEx"
 params = {'per_page': 100}
