@@ -21,7 +21,7 @@ jobs:
       - name: Run script to fetch code scanning results
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: python ./github.com/Gee-tha-S/codescanning/codescanning.py
+        run: python ./github/codescanning.py
  
       - name: Upload Results to Artifact
         uses: actions/upload-artifact@v2
