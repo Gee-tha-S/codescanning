@@ -27,4 +27,4 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: code-scanning-results
-          path: code_scanning_results.json
+          path: code-scanning-alerts.json
