@@ -6,7 +6,7 @@ import os
 TOKEN = "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"
 #TOKEN = os.getenv("TOKEN_GITHUB")
 print(TOKEN),
-ORG_NAME = "FedEx"
+#ORG_NAME = "FedEx"
 params = {'per_page': 100}
 alerts = []
 if not TOKEN:
