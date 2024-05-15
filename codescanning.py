@@ -14,7 +14,7 @@ if not TOKEN:
     exit(1)
 
 
-def fetch_code_scanning_alerts(org, token):
+def fetch_code_scanning_alerts(token):
     print("Fetching code scanning alerts data...")
     headers = {
         "Authorization": f"token {token}",
@@ -47,7 +47,7 @@ def fetch_code_scanning_alerts(org, token):
 
 
 def main():
-    alert_data = fetch_code_scanning_alerts(ORG_NAME, TOKEN)
+    alert_data = fetch_code_scanning_alerts(TOKEN)
     if alert_data:
         with open('code-scanning-alerts.json', 'w') as f:
             json.dump(alert_data, f, indent=4)
