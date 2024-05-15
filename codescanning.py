@@ -3,7 +3,7 @@ import json
 import os
 
 # Fetch GitHub Personal Access Token from environment variable
-TOKEN = "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"
+TOKEN = "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"
 #TOKEN = os.getenv("TOKEN_GITHUB")
 print(TOKEN),
 ORG_NAME = "FedEx"
