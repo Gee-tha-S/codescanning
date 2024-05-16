@@ -3,8 +3,8 @@ import json
 import os
 
 # Fetch GitHub Personal Access Token from environment variable
-TOKEN = "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"
-#TOKEN = os.getenv("TOKEN_GITHUB")
+#TOKEN = "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"
+TOKEN = os.environ.get("TOKEN_GITHUB")
 print(TOKEN),
 params = {'per_page': 100}
 alerts = []
