@@ -3,10 +3,9 @@ import json
 import os
 
 # Fetch GitHub Personal Access Token from environment variable
-TOKEN = "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"
+TOKEN = "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"
 #TOKEN = os.getenv("TOKEN_GITHUB")
 print(TOKEN),
-#ORG_NAME = "FedEx"
 params = {'per_page': 100}
 alerts = []
 if not TOKEN:
@@ -22,8 +21,7 @@ def fetch_code_scanning_alerts(token):
     }
     #url = f"https://api.github.com/orgs/{org}/code-scanning/alerts"
     url = f"https://api.github.com/repos/Gee-tha-S/codeqlexample/code-scanning/alerts"
-    #url = f"https://api.github.com/repos/FedEx/eai-3535171-self-service-demo/code-scanning/alerts/1"
-    #url = f"https://api.github.com/repos/FedEx/eai-3539454-smac/code-scanning/alerts?branch=FB-RefStaticCodeApr24CL-2730"
+
     page = 1
     try:
         while True:
