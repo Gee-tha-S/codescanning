@@ -20,7 +20,7 @@ jobs:
  
       - name: Run script to fetch code scanning results
         env:
-          GITHUB_TOKEN: "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"
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: python codescanning.py
  
       - name: Upload Results to Artifact
