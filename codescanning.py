@@ -3,7 +3,6 @@ import json
 import os
 
 # Fetch GitHub Personal Access Token from environment variable
-#TOKEN = "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"
 TOKEN = os.getenv("TOKEN")
 print("TOKEN as been"),
 params = {'per_page': 100}
@@ -20,7 +19,7 @@ def fetch_code_scanning_alerts(token):
         "Accept": "application/vnd.github+json",
     }
     #url = f"https://api.github.com/orgs/{org}/code-scanning/alerts"
-    url = f"https://api.github.com/repos/Gee-tha-S/codeqlexample/code-scanning/alerts"
+    url = f"https://api.github.com/repos/Gee-tha-S/codeqlexample/code-scanning"
 
     page = 1
     try:
