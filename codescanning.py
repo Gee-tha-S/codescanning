@@ -19,7 +19,7 @@ def fetch_code_scanning_alerts(token):
         "Accept": "application/vnd.github.v3+json",
     }
     #url = f"https://api.github.com/orgs/{org}/code-scanning/alerts"
-    url = f"https://api.github.com/repos/Gee-tha-S/codeqlexample/code-scanning"
+    url = f"https://api.github.com/repos/Gee-tha-S/codeqlexample/code-scanning/alerts"
 
     page = 1
     try:
