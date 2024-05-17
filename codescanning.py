@@ -16,7 +16,7 @@ def fetch_code_scanning_alerts(token):
     print("Fetching code scanning alerts data...")
     headers = {
         "Authorization": f"token {token}",
-        "Accept": "application/vnd.github+json",
+        "Accept": "application/vnd.github.v3+json",
     }
     #url = f"https://api.github.com/orgs/{org}/code-scanning/alerts"
     url = f"https://api.github.com/repos/Gee-tha-S/codeqlexample/code-scanning"
