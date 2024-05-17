@@ -7,9 +7,9 @@ TOKEN = os.getenv("TOKEN")
 print("TOKEN as been"),
 params = {'per_page': 100}
 alerts = []
-if not TOKEN:
-    print("TOKEN is not set.")
-    exit(1)
+#if not TOKEN:
+    #print("TOKEN is not set.")
+    #exit(1)
 
 
 def fetch_code_scanning_alerts(token):
