@@ -3,7 +3,7 @@ import json
 import os
 
 # Fetch GitHub Personal Access Token from environment variable
-TOKEN = os.getenv("TOKEN")
+#TOKEN = os.getenv("TOKEN")
 print("TOKEN as been"),
 params = {'per_page': 100}
 alerts = []
@@ -44,7 +44,7 @@ def fetch_code_scanning_alerts(token):
 
 
 def main():
-    alert_data = fetch_code_scanning_alerts(TOKEN)
+    alert_data = fetch_code_scanning_alerts(os.getenv("TOKEN"))
     if alert_data:
         with open('code-scanning-alerts.json', 'w') as f:
             json.dump(alert_data, f, indent=4)
