@@ -23,10 +23,13 @@ jobs:
           TOKEN: ${{ secrets.TOKEN}}
         run: python codescanning.py
  
-      - name: Upload Results to Artifact
+      - name: Commit and push JSON file
         env:
           TOKEN: ${{ secrets.TOKEN}}
-        uses: actions/upload-artifact@v2
-        with:
-          name: code-scanning-results
-          path: code-scanning-alerts.json
+        run: |
+          git config --global user.name 'Gee-tha-S'
+          git config --global user.email 'geethasrinivasan2000@gmail.com'
+          git add code-scanning-alerts.json
+          git commit -m 'Add generated code-scanning-alerts.json'
+          git push
+      
