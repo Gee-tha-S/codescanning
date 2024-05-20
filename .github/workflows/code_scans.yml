@@ -24,12 +24,12 @@ jobs:
         run: python codescanning.py
  
       - name: Commit and push JSON file
-        env:
-          TOKEN: ${{ secrets.TOKEN}}
         run: |
           git config --global user.name 'Gee-tha-S'
           git config --global user.email 'geethasrinivasan2000@gmail.com'
           git add code-scanning-alerts.json
           git commit -m 'Add generated code-scanning-alerts.json'
           git push
+        env:
+          TOKEN: ${{ secrets.TOKEN}}
       
