@@ -26,7 +26,7 @@ jobs:
       - name: Commit and push JSON file
         run: |
           git config --global user.name 'Gee-tha-S'
-          git config --global user.email 'geethasrinivasan2000@gmail.com'
+          git config --global user.email 'github-actions[bot]@users.geethasrinivasan2000@gmail.com'
           git add code-scanning-alerts.json
           git commit -m 'Add generated code-scanning-alerts.json'
           git push
