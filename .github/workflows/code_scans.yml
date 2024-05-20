@@ -23,7 +23,7 @@ jobs:
  
       - name: Upload Results to Artifact
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN}}
+          GITHUB_TOKEN: ${{ secrets.TOKEN}}
         uses: actions/upload-artifact@v2
         with:
           name: code-scanning-results
