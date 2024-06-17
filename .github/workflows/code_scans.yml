@@ -37,8 +37,5 @@ jobs:
           git push
         env:
           TOKEN: ${{ secrets.TOKEN}}
-          
-      - name: Run script to csv conversion
-        run: python csvconversion.py
 
       
