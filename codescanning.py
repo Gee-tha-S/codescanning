@@ -46,8 +46,8 @@ def fetch_code_scanning_alerts(token):
 def main():
     alert_data = fetch_code_scanning_alerts(TOKEN)
     if alert_data:
-        with open('code-scanning-alerts.json', 'w') as f:
-            json.dump(alert_data, f, indent=4)
+        with open('code-scanning-alerts.csv', 'w') as f:
+            csv.dump(alert_data, f, indent=4)
     else:
         print("Failed to fetch code-scanning alerts data or alerts data is empty.")
 
