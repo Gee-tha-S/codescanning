@@ -33,7 +33,7 @@ jobs:
           git config --global user.name 'Gee-tha-S'
           git config --global user.email 'github-actions[bot]@users.geethasrinivasan2000@gmail.com'
           git add code-scanning-alerts.json
-  # git commit -m 'Add generated code-scanning-alerts.json'
+          # git commit -m 'Add generated code-scanning-alerts.json'
           git push
         env:
           TOKEN: ${{ secrets.TOKEN}}                    
