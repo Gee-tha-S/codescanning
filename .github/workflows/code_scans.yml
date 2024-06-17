@@ -39,5 +39,14 @@ jobs:
           TOKEN: ${{ secrets.TOKEN}}                    
       - name: Run script to csv conversion
         run: python csvconversion.py
-
+        
+      - name: Commit and push csv file
+        run: |
+          git config --global user.name 'Gee-tha-S'
+          git config --global user.email 'github-actions[bot]@users.geethasrinivasan2000@gmail.com'
+          git add code-scanning-alerts.csv
+          git commit -m 'Add generated code-scanning-alerts.csv'
+          git push
+        env:
+          TOKEN: ${{ secrets.TOKEN}}
       
